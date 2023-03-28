@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlackJack counting</title>
+    <link rel="icon" href="Icon.jpg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <table>
+            <tbody>
+                <tr id="HeartsLine">
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_ass">
+                            <div class="top"><span>A</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>A</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_king">
+                            <div class="top"><span>K</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>K</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_queen">
+                            <div class="top"><span>Q</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>Q</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_j">
+                            <div class="top"><span>J</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>J</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_10">
+                            <div class="top"><span>10</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>10</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_9">
+                            <div class="top"><span>9</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>9</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_8">
+                            <div class="top"><span>8</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>8</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_7">
+                            <div class="top"><span>7</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>7</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_6">
+                            <div class="top"><span>6</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>6</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_5">
+                            <div class="top"><span>5</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>5</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_4">
+                            <div class="top"><span>4</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>4</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_3">
+                            <div class="top"><span>3</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>3</span></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="outlineHeart shadow rounded" id="Heart_2">
+                            <div class="top"><span>2</span><span>&hearts;</span></div>
+                            <h1>&hearts;</h1>
+                            <div class="bottom"><span>&hearts;</span><span>2</span></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="BlackHeartsLine">
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_ass">
+                            <div class="top">
+                                <span>A</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>A</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_king">
+                            <div class="top">
+                                <span>K</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>K</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_queen">
+                            <div class="top">
+                                <span>Q</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>Q</span><span></span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_j">
+                            <div class="top">
+                                <span>J</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>J</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_10">
+                            <div class="top">
+                                <span>10</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>10</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_9">
+                            <div class="top">
+                                <span>9</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>9</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_8">
+                            <div class="top">
+                                <span>8</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>8</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_7">
+                            <div class="top">
+                                <span>7</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>7</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_6">
+                            <div class="top">
+                                <span>6</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>6</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_5">
+                            <div class="top">
+                                <span>5</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>5</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_4">
+                            <div class="top">
+                                <span>4</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>4</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_3">
+                            <div class="top">
+                                <span>3</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>3</span><span>&spades;</span>
+                            </div>
+                    </td>
+                    <td>
+                        <div class="outlineBlackHeart shadow rounded" id="BlackHeart_2">
+                            <div class="top">
+                                <span>2</span><span>&spades;</span>
+                            </div>
+                            <h1>&spades;</h1>
+                            <div class="bottom">
+                                <span>2</span><span>&spades;</span>
+                            </div>
+                    </td>
+                </tr>
+                <tr id="DiamondsLine">
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_ass">
+                            <div class="top">
+                                <span>A</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>A</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_king">
+                            <div class="top">
+                                <span>K</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>K</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_queen">
+                            <div class="top">
+                                <span>Q</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>Q</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_j">
+                            <div class="top">
+                                <span>J</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>J</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_10">
+                            <div class="top">
+                                <span>10</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>10</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_9">
+                            <div class="top">
+                                <span>9</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>9</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_8">
+                            <div class="top">
+                                <span>8</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>8</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_7">
+                            <div class="top">
+                                <span>7</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>7</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_6">
+                            <div class="top">
+                                <span>6</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>6</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_5">
+                            <div class="top">
+                                <span>5</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>5</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_4">
+                            <div class="top">
+                                <span>4</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>4</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_3">
+                            <div class="top">
+                                <span>3</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>3</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rounded shadow outlineHeart" id="Diamond_2">
+                            <div class="top">
+                                <span>2</span><span>&diams;</span>
+                            </div>
+                            <h1>&diams;</h1>
+                            <div class="bottom">
+                                <span>2</span><span>&diams;</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="ClubsLine">
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_ass">
+                            <div class="top">
+                                <span>A</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>A</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_king">
+                            <div class="top">
+                                <span>K</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>K</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_queen">
+                            <div class="top">
+                                <span>Q</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>Q</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_j">
+                            <div class="top">
+                                <span>J</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>J</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_10">
+                            <div class="top">
+                                <span>10</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>10</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_9">
+                            <div class="top">
+                                <span>9</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>9</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_8">
+                            <div class="top">
+                                <span>8</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>8</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_7">
+                            <div class="top">
+                                <span>7</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>7</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_6">
+                            <div class="top">
+                                <span>6</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>6</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_5">
+                            <div class="top">
+                                <span>5</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>5</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_4">
+                            <div class="top">
+                                <span>4</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>4</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_3">
+                            <div class="top">
+                                <span>3</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>3</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="shadow outlineBlackHeart rounded" id="Clubs_2">
+                            <div class="top">
+                                <span>2</span><span>&clubs;</span>
+                            </div>
+                            <h1>&clubs;</h1>
+                            <div class="bottom">
+                                <span>2</span><span>&clubs;</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button class="button" onclick="next()" id="button">Start</button>
+        <div>
+            <h2 class="down" id="score">Press the button to Start</h2>
+        </div>
+        <script src="java.js"></script>
+</body>
+</html>
